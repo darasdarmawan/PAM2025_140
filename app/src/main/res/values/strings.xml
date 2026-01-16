@@ -24,7 +24,7 @@
     <string name="sangat_buruk">Sangat Buruk</string>
     <string name="search_by_date">Cari berdasarkan tanggal</string>
     <string name="yes">Ya</string>
-
+    <string name="graph_saved">Simpan Grafik</string>
     <string name="field_empty">Field tidak boleh kosong</string>
     <string name="invalid_email">Email Salah</string>
     <string name="invalid_password">Password Salah</string>
