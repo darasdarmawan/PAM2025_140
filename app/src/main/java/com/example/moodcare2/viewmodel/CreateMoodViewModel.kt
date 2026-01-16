@@ -128,4 +128,23 @@ class CreateMoodViewModel(
             }
         }
     }
+    fun deleteMood(moodId: Int) {
+        viewModelScope.launch {
+            _moodState.value = MoodState.Loading
+            try {
+                val response = repository.deleteMood(moodId)
+                if (response.isSuccessful && response.body()?.success == true) {
+                    _moodState.value = MoodState.OperationSuccess("Mood berhasil dihapus!")
+                } else {
+                    _moodState.value = MoodState.Error("Gagal menghapus mood")
+                }
+            } catch (e: Exception) {
+                _moodState.value = MoodState.Error(e.message ?: "Error tidak diketahui")
+            }
+        }
+    }
 
+    fun resetState() {
+        _moodState.value = MoodState.Idle
+    }
+}
