@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">MOODCARE</string>
+    <string name="login">Login</string>
+    <string name="register">Daftar</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="full_name">Nama Lengkap</string>
+    <string name="login_subtitle">Catat mood harian Anda</string>
+    <string name="register_subtitle">Buat akun baru</string>
+
+    <string name="home">Home</string>
+    <string name="history">Riwayat</string>
+    <string name="graph">Grafik</string>
+    <string name="profile">Profil</string>
+
+    <string name="description">Deskripsi Perasaan</string>
+    <string name="hal_bersyukur">Hal yang Membuat Bersyukur</string>
+    <string name="hal_sedih">Hal yang Membuat Sedih</string>
+    <string name="hal_perbaikan">Hal yang Harus Diperbaiki</string>
+    <string name="sangat_senang">Sangat Senang</string>
+    <string name="senang">Senang</string>
+    <string name="netral">Netral</string>
+    <string name="buruk">Buruk</string>
+    <string name="sangat_buruk">Sangat Buruk</string>
+    <string name="search_by_date">Cari berdasarkan tanggal</string>
+    <string name="yes">Ya</string>
+
+    <string name="field_empty">Field tidak boleh kosong</string>
+    <string name="invalid_email">Email Salah</string>
+    <string name="invalid_password">Password Salah</string>
+    <string name="cancel">Batal</string>
+    <string name="ok">OK</string>
+    <string name="back">back</string>
+    <string name="tanya">Apakah yakin akan menghapus ini ?</string>
+    <string name="tanya1">Apakah anda yakin akan menambah mood ini ?</string>
+    <string name="tanya2">Apakah anda yakin akan mengubah mood ini ?</string>
+</resources>
