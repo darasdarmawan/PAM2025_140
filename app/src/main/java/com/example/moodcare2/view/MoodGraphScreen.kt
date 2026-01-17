@@ -246,7 +246,7 @@ fun MoodGraphScreen(navController: NavController) {
             onDismissRequest = { showDownloadDialog = false },
             shape = RoundedCornerShape(28.dp),
             confirmButton = { TextButton(onClick = { showDownloadDialog = false }) { Text("OK") } },
-            title = { Text(if (downloadMessage.contains("berhasil")) "Berhasil" else "Gagal") },
+            title = { Text(if (downloadMessage.startsWith("✅")) "Berhasil" else "Gagal") },
             text = { Text(downloadMessage) }
         )
     }
