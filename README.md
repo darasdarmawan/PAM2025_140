@@ -187,6 +187,12 @@ Database menggunakan **MySQL** dengan tabel utama:
 * `graphs`
 
 ---
+## 👤 Author
+
+Nama : Dara Syauqi Darmawan
+NIM : 20230140140
+
+---
 
 ## 📜 Lisensi
 
@@ -194,4 +200,4 @@ Proyek **MoodCare** ini dikembangkan **khusus untuk keperluan tugas akhir / akad
 * Bebas digunakan sebagai referensi pembelajaran
 * Hak cipta tetap dimiliki oleh pengembang
 
-© 2025 – Dara Syauqi Darmawan
+© 2026 – Dara Syauqi Darmawan
