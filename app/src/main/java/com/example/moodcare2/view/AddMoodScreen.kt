@@ -238,7 +238,7 @@ fun AddMoodScreen(navController: NavController) {
 fun MoodSelector(selectedMood: String, onMoodSelected: (String) -> Unit) {
     val moods = listOf(
         "Sangat Baik" to "😄",
-        stringResource(R.string.senang) to "😊",
+        stringResource(R.string.baik) to "😊",
         stringResource(R.string.netral) to "😐",
         stringResource(R.string.buruk) to "😔",
         stringResource(R.string.sangat_buruk) to "😢"
