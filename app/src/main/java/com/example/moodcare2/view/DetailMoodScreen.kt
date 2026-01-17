@@ -63,28 +63,35 @@ fun DetailMoodScreen(navController: NavController, moodId: Int) {
 
     Scaffold(
         topBar = {
-            CenterAlignedTopAppBar(
-                title = { Text("Detail Mood", fontWeight = FontWeight.ExtraBold) },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.Default.ArrowBack, null)
-                    }
-                },
-                actions = {
-                    IconButton(onClick = { navController.navigate("${Screen.EditMood.route}/$moodId") }) {
-                        Icon(Icons.Default.Edit, null)
-                    }
-                    IconButton(onClick = { showDeleteDialog = true }) {
-                        Icon(Icons.Default.DeleteOutline, null, tint = Color(0xFFDC143C))
-                    }
-                },
-                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color.Transparent,
-                    titleContentColor = colorResource(R.color.PinkSecondary),
-                    navigationIconContentColor = colorResource(R.color.PinkSecondary),
-                    actionIconContentColor = colorResource(R.color.PinkSecondary)
+            Surface(
+                modifier = Modifier.fillMaxWidth(),
+                color = colorResource(R.color.PinkDark).copy(alpha = 0.6f),
+                border = BorderStroke(
+                    width = 1.dp,
+                    color = colorResource(R.color.PinkSecondary).copy(alpha = 0.2f) // Batas pink tipis
                 )
             )
+            {
+                CenterAlignedTopAppBar(
+                    title = { Text("Detail Mood", fontWeight = FontWeight.ExtraBold, color = colorResource(R.color.Matcha)) },
+                    navigationIcon = {
+                        IconButton(onClick = { navController.popBackStack() }) {
+                            Icon(Icons.Default.ArrowBack, null)
+                        }
+                    },
+                    actions = {
+                        IconButton(onClick = { navController.navigate("${Screen.EditMood.route}/$moodId") }) {
+                            Icon(Icons.Default.Edit, null)
+                        }
+                        IconButton(onClick = { showDeleteDialog = true }) {
+                            Icon(Icons.Default.DeleteOutline, null, tint = Color(0xFFDC143C))
+                        }
+                    },
+                    colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+                        containerColor = Color.Transparent
+                    )
+                )
+            }
         },
         containerColor = colorResource(R.color.PinkBackground)
     ) { paddingValues ->
@@ -109,8 +116,12 @@ fun DetailMoodScreen(navController: NavController, moodId: Int) {
                             .padding(horizontal = 20.dp),
                         verticalArrangement = Arrangement.spacedBy(16.dp)
                     ) {
+                        Spacer(Modifier.height(16.dp))
+
                         Card(
-                            modifier = Modifier.fillMaxWidth(),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = 8.dp),
                             shape = RoundedCornerShape(32.dp),
                             elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
                         ) {

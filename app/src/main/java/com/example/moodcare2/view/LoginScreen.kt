@@ -1,5 +1,6 @@
 package com.example.moodcare2.view
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -58,6 +59,20 @@ fun LoginScreen(navController: NavController) {
     }
 
     Scaffold(
+        // Menambahkan topBar pembatas agar konsisten dengan layar lain
+        topBar = {
+            Surface(
+                modifier = Modifier.fillMaxWidth(),
+                color = Color.White.copy(alpha = 0.6f),
+                border = BorderStroke(
+                    width = 1.dp,
+                    color = colorResource(R.color.PinkSecondary).copy(alpha = 0.2f)
+                )
+            ) {
+                // Spacer kecil hanya untuk memberikan tinggi pada surface pembatas
+                Spacer(modifier = Modifier.height(12.dp).windowInsetsTopHeight(WindowInsets.statusBars))
+            }
+        },
         containerColor = colorResource(R.color.PinkBackground)
     ) { paddingValues ->
         Column(
@@ -69,13 +84,18 @@ fun LoginScreen(navController: NavController) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            Spacer(modifier = Modifier.height(40.dp))
+            Spacer(modifier = Modifier.height(20.dp))
 
+            // Logo dengan Surface yang memiliki Border konsisten
             Box(contentAlignment = Alignment.Center) {
                 Surface(
                     modifier = Modifier.size(140.dp),
                     shape = androidx.compose.foundation.shape.CircleShape,
-                    color = Color.White.copy(alpha = 0.5f)
+                    color = Color.White.copy(alpha = 0.5f),
+                    border = BorderStroke(
+                        width = 2.dp,
+                        color = colorResource(R.color.PinkSecondary).copy(alpha = 0.2f)
+                    )
                 ) {}
                 Image(
                     painter = painterResource(id = R.drawable.fox),
@@ -86,11 +106,12 @@ fun LoginScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.height(24.dp))
 
+            // Nama Aplikasi menggunakan warna Matcha agar konsisten dengan Home
             Text(
                 text = stringResource(R.string.app_name),
                 style = MaterialTheme.typography.displaySmall,
                 fontWeight = FontWeight.ExtraBold,
-                color = colorResource(R.color.PinkSecondary)
+                color = colorResource(R.color.Matcha)
             )
 
             Text(
@@ -102,14 +123,18 @@ fun LoginScreen(navController: NavController) {
 
             Spacer(modifier = Modifier.height(40.dp))
 
+            // Card Form dengan Border halus
             Card(
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(24.dp),
                 colors = CardDefaults.cardColors(containerColor = Color.White),
-                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+                border = BorderStroke(
+                    width = 1.dp,
+                    color = colorResource(R.color.PinkSecondary).copy(alpha = 0.1f)
+                )
             ) {
                 Column(modifier = Modifier.padding(20.dp)) {
-
                     OutlinedTextField(
                         value = email,
                         onValueChange = { email = it; emailError = false },
@@ -155,9 +180,10 @@ fun LoginScreen(navController: NavController) {
 
             if (authState is AuthState.Error) {
                 Surface(
-                    color = Color(0xFFFFEBEE),
+                    color = colorResource(R.color.PinkDark).copy(alpha = 0.6f),
                     shape = RoundedCornerShape(12.dp),
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier.fillMaxWidth(),
+                    border = BorderStroke(1.dp, Color(0xFFDC143C).copy(alpha = 0.2f))
                 ) {
                     Text(
                         text = (authState as AuthState.Error).message,
@@ -169,6 +195,7 @@ fun LoginScreen(navController: NavController) {
                 Spacer(modifier = Modifier.height(16.dp))
             }
 
+            // Tombol Login
             Button(
                 onClick = {
                     emailError = email.isBlank()
@@ -214,7 +241,6 @@ fun LoginScreen(navController: NavController) {
         }
     }
 }
-
 @Composable
 fun loginFieldColors() = OutlinedTextFieldDefaults.colors(
     focusedBorderColor = colorResource(R.color.PinkPrimary),

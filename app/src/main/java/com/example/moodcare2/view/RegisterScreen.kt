@@ -15,6 +15,7 @@ import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import android.util.Patterns
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -68,19 +69,38 @@ fun RegisterScreen(navController: NavController) {
 
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text(stringResource(R.string.register), fontWeight = FontWeight.SemiBold) },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = stringResource(R.string.back))
-                    }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color.Transparent,
-                    titleContentColor = colorResource(R.color.PinkSecondary),
-                    navigationIconContentColor = colorResource(R.color.PinkSecondary)
+            Surface(
+                modifier = Modifier.fillMaxWidth(),
+                color = colorResource(R.color.PinkDark).copy(alpha = 0.6f),
+                border = BorderStroke(
+                    width = 1.dp,
+                    color = colorResource(R.color.PinkSecondary).copy(alpha = 0.2f)
                 )
             )
+            {
+                TopAppBar(
+                    title = {
+                        Text(
+                            stringResource(R.string.register),
+                            fontWeight = FontWeight.SemiBold,
+                            color = colorResource(R.color.Matcha)
+                        )
+                    },
+                    navigationIcon = {
+                        IconButton(onClick = { navController.popBackStack() }) {
+                            Icon(
+                                Icons.Default.ArrowBack,
+                                contentDescription = stringResource(R.string.back)
+                            )
+                        }
+                    },
+                    colors = TopAppBarDefaults.topAppBarColors(
+                        containerColor = Color.Transparent,
+                        titleContentColor = colorResource(R.color.PinkSecondary),
+                        navigationIconContentColor = colorResource(R.color.PinkSecondary)
+                    )
+                )
+            }
         },
         containerColor = colorResource(R.color.PinkBackground)
     ) { paddingValues ->

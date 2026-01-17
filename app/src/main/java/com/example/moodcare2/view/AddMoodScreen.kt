@@ -59,25 +59,34 @@ fun AddMoodScreen(navController: NavController) {
 
     Scaffold(
         topBar = {
-            CenterAlignedTopAppBar(
-                title = {
-                    Text(
-                        "Catat Mood",
-                        fontWeight = FontWeight.ExtraBold,
-                        style = MaterialTheme.typography.titleLarge
-                    )
-                },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.Default.ArrowBack, null)
-                    }
-                },
-                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color.Transparent,
-                    titleContentColor = colorResource(R.color.PinkSecondary),
-                    navigationIconContentColor = colorResource(R.color.PinkSecondary)
+            Surface(
+                modifier = Modifier.fillMaxWidth(),
+                color = colorResource(R.color.PinkDark).copy(alpha = 0.6f),
+                border = BorderStroke(
+                    width = 1.dp,
+                    color = colorResource(R.color.PinkSecondary).copy(alpha = 0.2f)
                 )
             )
+            {
+                CenterAlignedTopAppBar(
+                    title = {
+                        Text(
+                            "Catat Mood",
+                            fontWeight = FontWeight.ExtraBold,
+                            style = MaterialTheme.typography.titleLarge,
+                            color = colorResource(R.color.Matcha)
+                        )
+                    },
+                    navigationIcon = {
+                        IconButton(onClick = { navController.popBackStack() }) {
+                            Icon(Icons.Default.ArrowBack, null)
+                        }
+                    },
+                    colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+                        containerColor = Color.Transparent
+                    )
+                )
+            }
         },
         snackbarHost = {
             SnackbarHost(hostState = snackbarHostState) { data ->
@@ -230,8 +239,12 @@ fun AddMoodScreen(navController: NavController) {
             dismissButton = {
                 TextButton(onClick = { showConfirmDialog = false }) { Text("Batal", color = Color.Gray) }
             }
+
+
         )
+
     }
+
 }
 
 @Composable

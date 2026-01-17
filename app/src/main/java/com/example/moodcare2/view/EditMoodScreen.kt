@@ -71,25 +71,34 @@ fun EditMoodScreen(navController: NavController, moodId: Int) {
 
     Scaffold(
         topBar = {
-            CenterAlignedTopAppBar(
-                title = {
-                    Text(
-                        "Perbarui Catatan",
-                        fontWeight = FontWeight.ExtraBold,
-                        style = MaterialTheme.typography.titleLarge
-                    )
-                },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.Default.ArrowBack, stringResource(R.string.back))
-                    }
-                },
-                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color.Transparent,
-                    titleContentColor = colorResource(R.color.PinkSecondary),
-                    navigationIconContentColor = colorResource(R.color.PinkSecondary)
+            Surface(
+                modifier = Modifier.fillMaxWidth(),
+                color = colorResource(R.color.PinkDark).copy(alpha = 0.6f),
+                border = BorderStroke(
+                    width = 1.dp,
+                    color = colorResource(R.color.PinkSecondary).copy(alpha = 0.2f)
                 )
             )
+            {
+                CenterAlignedTopAppBar(
+                    title = {
+                        Text(
+                            "Perbarui Catatan",
+                            fontWeight = FontWeight.ExtraBold,
+                            style = MaterialTheme.typography.titleLarge,
+                            color = colorResource(R.color.Matcha)
+                        )
+                    },
+                    navigationIcon = {
+                        IconButton(onClick = { navController.popBackStack() }) {
+                            Icon(Icons.Default.ArrowBack, stringResource(R.string.back))
+                        }
+                    },
+                    colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+                        containerColor = Color.Transparent
+                    )
+                )
+            }
         },
         containerColor = colorResource(R.color.PinkBackground)
     ) { paddingValues ->
@@ -106,7 +115,11 @@ fun EditMoodScreen(navController: NavController, moodId: Int) {
                     .padding(horizontal = 20.dp),
                 verticalArrangement = Arrangement.spacedBy(20.dp)
             ) {
+                Spacer(Modifier.height(16.dp))
                 Card(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 8.dp),
                     shape = RoundedCornerShape(16.dp),
                     colors = CardDefaults.cardColors(containerColor = Color.White),
                     elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
