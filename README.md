@@ -106,17 +106,11 @@ Aplikasi menerapkan arsitektur **client–server**, dengan Android sebagai front
 
 | Detail Mood           | Edit Mood           | Hasil Edit           |
 | --------------------- | ------------------- | -------------------- |
-| <img width="1280" height="2856" alt="HalamanDetailMood" src="https://github.com/user-attachments/assets/e22a9d27-b5ae-422e-b319-dd5b0e655f85" />
- | <img width="1280" height="2856" alt="HalamanEditMood" src="https://github.com/user-attachments/assets/9f5654db-2dd4-4c51-b7e2-c49dbaa856e2" />
- | <img width="1280" height="2856" alt="HasilSetelahEdit" src="https://github.com/user-attachments/assets/b67d5afd-acae-4650-8ee0-e42d277d8957" />
- |
+| <img width="1280" height="2856" alt="HalamanDetailMood" src="https://github.com/user-attachments/assets/e22a9d27-b5ae-422e-b319-dd5b0e655f85" />| <img width="1280" height="2856" alt="HalamanEditMood" src="https://github.com/user-attachments/assets/9f5654db-2dd4-4c51-b7e2-c49dbaa856e2" />| <img width="1280" height="2856" alt="HasilSetelahEdit" src="https://github.com/user-attachments/assets/b67d5afd-acae-4650-8ee0-e42d277d8957" />|
 
 | Konfirmasi Hapus        | Setelah Dihapus            | Filter Valid                             |
 | ----------------------- | -------------------------- | ---------------------------------------- |
-| <img width="1280" height="2856" alt="KonfirmasiHapusMood" src="https://github.com/user-attachments/assets/27c93748-fa52-4ae6-b780-a2e279278b33" />
- | <img width="1280" height="2856" alt="SetelahSatuMoodDihapus" src="https://github.com/user-attachments/assets/cf60d9dc-b79d-444f-8097-9facd68fb0f6" />
- | <img width="1280" height="2856" alt="FilterRiwayatBerdasarkanTanggalValid" src="https://github.com/user-attachments/assets/26918914-c0fc-4be0-8d72-841c66afacaa" />
- |
+| <img width="1280" height="2856" alt="KonfirmasiHapusMood" src="https://github.com/user-attachments/assets/27c93748-fa52-4ae6-b780-a2e279278b33" />| <img width="1280" height="2856" alt="SetelahSatuMoodDihapus" src="https://github.com/user-attachments/assets/cf60d9dc-b79d-444f-8097-9facd68fb0f6" />| <img width="1280" height="2856" alt="FilterRiwayatBerdasarkanTanggalValid" src="https://github.com/user-attachments/assets/26918914-c0fc-4be0-8d72-841c66afacaa" />|
 
 | Filter Tidak Valid                            | Konfirmasi Edit Mood  |   |
 | --------------------------------------------- |  ---------------------- | - |
