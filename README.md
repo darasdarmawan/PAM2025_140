@@ -96,7 +96,7 @@ Aplikasi menerapkan arsitektur **client–server**, dengan Android sebagai front
 
 | Home            | Home Setelah + Mood & FotoProfile              | Tambah Mood           |
 | --------------- | -------------------------------- | --------------------- |
-| <img width="1280" height="2856" alt="HalamanHome" src="https://github.com/user-attachments/assets/ad2f5326-1652-4334-80da-3adc4fdcfde6" />| <img width="1280" height="2856" alt="HomeSetelahUpdateProfiledanMood" src="https://github.com/user-attachments/assets/784a1977-3f62-4f99-86c2-7f5ef3eb24df" />| <img width="1280" height="2856" alt="HalamanTambahMood" src="https://github.com/user-attachments/assets/26ed88f2-07b3-4d51-864b-482d30a1f548" />|
+| <img width="1280" height="2856" alt="HalamanHome" src="https://github.com/user-attachments/assets/ad2f5326-1652-4334-80da-3adc4fdcfde6" />| <img width="1280" height="2856" alt="UpdateUIHome" src="https://github.com/user-attachments/assets/236d1972-17d9-4722-9d08-04c03eeabae0" />| <img width="1280" height="2856" alt="HalamanTambahMood" src="https://github.com/user-attachments/assets/26ed88f2-07b3-4d51-864b-482d30a1f548" />|
 
 | Validasi               | Konfirmasi               | Notifikasi               |
 | ---------------------- | ------------------------ | ------------------------ |
