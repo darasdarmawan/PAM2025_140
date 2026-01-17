@@ -186,8 +186,12 @@ fun RegisterScreen(navController: NavController) {
                             }
                         },
                         visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
-                        isError = passwordError || passwordMismatch,
-                        supportingText = { if (passwordError) Text(stringResource(R.string.invalid_password)) },
+                        isError = password.isNotEmpty() && password.length < 6 || passwordMismatch,
+                        supportingText = {
+                            if (password.isNotEmpty() && password.length < 6) {
+                                Text("Password harus minimal 6 karakter")
+                            }
+                        },
                         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                         singleLine = true,
                         modifier = Modifier.fillMaxWidth(),
