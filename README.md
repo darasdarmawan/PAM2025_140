@@ -90,51 +90,48 @@ Aplikasi menerapkan arsitektur **client–server**, dengan Android sebagai front
 
 | Validasi Login    | Validasi Password          | Email Sudah Terdaftar                   |
 | ----------------- | -------------------------- | --------------------------------------- |
-| <img width="1280" height="2856" alt="ValidasiLogin" src="https://github.com/user-attachments/assets/993522be-9f05-47a8-bd97-9bde4e758a34" />| <img width="1280" height="2856" alt="ValidasiPasswordRegist" src="https://github.com/user-attachments/assets/1a4ac118-36b0-4ba7-8052-91c50c047f36" />| <img width="1280" height="2856" alt="ValidasiRegistEmailYgSudahTerdaftar" src="https://github.com/user-attachments/assets/7476267d-1473-4a48-bf70-28abb622496d" />|
+| <img width="1280" height="2856" alt="ValidasiLogin" src="https://github.com/user-attachments/assets/993522be-9f05-47a8-bd97-9bde4e758a34" />|<img width="1280" height="2856" alt="UpdateValidasiPasswordRegis" src="https://github.com/user-attachments/assets/7f1ed678-c730-414c-890c-db497dc8f51a" />|<img width="1280" height="2856" alt="UpdateEmailTerdaftar" src="https://github.com/user-attachments/assets/b442ed78-8e0e-4dd4-b578-0f6ea4283649" />|
 
 ### 🏠 Home & Mood
 
 | Home            | Home Setelah + Mood & FotoProfile              | Tambah Mood           |
 | --------------- | -------------------------------- | --------------------- |
-| <img width="1280" height="2856" alt="HalamanHome" src="https://github.com/user-attachments/assets/ad2f5326-1652-4334-80da-3adc4fdcfde6" />| <img width="1280" height="2856" alt="UpdateUIHome" src="https://github.com/user-attachments/assets/236d1972-17d9-4722-9d08-04c03eeabae0" />|<img width="1280" height="2856" alt="UpdateUIAddMood" src="https://github.com/user-attachments/assets/2beab03f-2554-45da-80f0-3c8416169ef5" />|
+|<img width="1280" height="2856" alt="UpdateUiHomebaru" src="https://github.com/user-attachments/assets/efb4e7a9-b02a-4f34-933d-36ed5b6f0dc7" />| <img width="1280" height="2856" alt="HomeAfterIsimooddanfoto" src="https://github.com/user-attachments/assets/a93efe3c-e9d5-49d7-a965-f217efd1df51" />|<img width="1280" height="2856" alt="UpdateUIAddMood" src="https://github.com/user-attachments/assets/1ec27d0e-7c38-4672-8870-5fa69443243c" />|
 
 | Validasi               | Konfirmasi               | Notifikasi               |
 | ---------------------- | ------------------------ | ------------------------ |
-| <img width="1280" height="2856" alt="ValidasiTambahMood" src="https://github.com/user-attachments/assets/a2d3c80a-8438-40a1-b9f0-c0d488c3a8df" />| <img width="1280" height="2856" alt="KonfirmasiTambahMood" src="https://github.com/user-attachments/assets/1b413671-5d1c-4e03-8d3c-701d1817f9af" />| <img width="1280" height="2856" alt="NotifikasiTambahMood" src="https://github.com/user-attachments/assets/63af78df-5861-431d-a566-f978b7704d8a" />|
+| <img width="1280" height="2856" alt="UpdateValidasiAddMood" src="https://github.com/user-attachments/assets/b0341793-31ac-4637-a975-6a94b2fe8724" />| <img width="1280" height="2856" alt="KonfirmasiTambahMood" src="https://github.com/user-attachments/assets/684afd95-d8a8-4613-a13e-309951a92ce8" />| <img width="1280" height="2856" alt="NotifikasiTambahMood" src="https://github.com/user-attachments/assets/15fbfc8e-4cbb-44fb-89d1-2c8f0cefdd9f" />|
 
 ### 📜 Riwayat Mood
 
 | Detail Mood           | Edit Mood           | Hasil Edit           |
 | --------------------- | ------------------- | -------------------- |
-| <img width="1280" height="2856" alt="UpdateUIDetail" src="https://github.com/user-attachments/assets/4ef453e8-1561-47e9-9c79-682664b30a95" />| <img width="1280" height="2856" alt="UpdateUIEditMood" src="https://github.com/user-attachments/assets/3b23888b-9bb4-4a95-9895-c98fd91acf2a" />| <img width="1280" height="2856" alt="HasilSetelahEdit" src="https://github.com/user-attachments/assets/b67d5afd-acae-4650-8ee0-e42d277d8957" />|
+| <img width="1280" height="2856" alt="UpdateUIDetail" src="https://github.com/user-attachments/assets/3c6eeaa1-37f4-479d-9192-d1bdb99c3dd5" />| <img width="1280" height="2856" alt="UpdateUIEditMood" src="https://github.com/user-attachments/assets/b9748fba-7bd9-4137-95d5-f677d11ef573" />| <img width="1280" height="2856" alt="HasilEditBaru" src="https://github.com/user-attachments/assets/b77f627b-f846-4318-8cb9-10948f3533cc" />|
 
 | Konfirmasi Hapus        | Setelah Dihapus            | Filter Valid                             |
 | ----------------------- | -------------------------- | ---------------------------------------- |
-| <img width="1280" height="2856" alt="KonfirmasiHapusMood" src="https://github.com/user-attachments/assets/27c93748-fa52-4ae6-b780-a2e279278b33" />| <img width="1280" height="2856" alt="SetelahSatuMoodDihapus" src="https://github.com/user-attachments/assets/cf60d9dc-b79d-444f-8097-9facd68fb0f6" />| <img width="1280" height="2856" alt="FilterRiwayatBerdasarkanTanggalValid" src="https://github.com/user-attachments/assets/26918914-c0fc-4be0-8d72-841c66afacaa" />|
+| <img width="1280" height="2856" alt="KonfirmasiDeleteMoodBaru" src="https://github.com/user-attachments/assets/91eaa7ac-4a51-4d60-83cd-c0efb0bb6e65" />| <img width="1280" height="2856" alt="SetelehDeleteMood" src="https://github.com/user-attachments/assets/d8826a70-f8c5-42e8-911c-db7886268e3c" />| <img width="1280" height="2856" alt="ValidasiRiwayatTanggalBaru" src="https://github.com/user-attachments/assets/01aab1e1-4eb4-40a7-b9dd-c7e799d300fe" />|
 
-| Filter Tidak Valid                            | Konfirmasi Edit Mood  |   |
-| --------------------------------------------- |  ---------------------- | - |
-| <img width="1280" height="2856" alt="FilterRiwayatBerdasarkanTanggalTidakValid" src="https://github.com/user-attachments/assets/862ad279-6896-4267-9781-2b536ae9cf9a" />| <img width="1280" height="2856" alt="KonfirmasiPerubahan" src="https://github.com/user-attachments/assets/7b433b64-1cfd-4ff2-9814-f90ea8f3b2db" />|   |
+| Filter Tidak Valid                            | Konfirmasi Edit Mood  |  Riwayat Screen |
+| --------------------------------------------- |  ---------------------| --------------- |
+| <img width="1280" height="2856" alt="ValidasiRiwayatTanggalKosong" src="https://github.com/user-attachments/assets/aec69547-54ef-4e01-b0b6-2c5db9a7caf6" />|<img width="1280" height="2856" alt="KonfirmasiEditMoodBaru" src="https://github.com/user-attachments/assets/f4d3b542-427b-4f79-a537-faebf49cf93e" />| <img width="1280" height="2856" alt="EditMoodBaru" src="https://github.com/user-attachments/assets/ce53f790-7aef-4c7b-9cbe-95c631e99458" />|
 
 ### 📊 Grafik Mood
 
-| Grafik                      | Notifikasi                   | Hasil Download          |
+| Grafik                      | Grafik Tanggal Valid         | Konfirmasi Berhasil Download |
 | ----------------------------| ---------------------------- | ----------------------- |
-| <img width="1280" height="2856" alt="UpdateUIGrafikScreen" src="https://github.com/user-attachments/assets/99e8da26-3bed-47fe-8005-ef9a4e730d58" />| <img width="1280" height="2856" alt="NotifikasiGrafikBerhasil" src="https://github.com/user-attachments/assets/2448c54d-7e64-4c86-a1f9-0646033f37e9" />|<img width="1280" height="2856" alt="HasilDownloadGrafik" src="https://github.com/user-attachments/assets/0b6719ec-2297-4541-b97b-25b08014051b" />|
+| <img width="1280" height="2856" alt="HalamanGrafikBaru" src="https://github.com/user-attachments/assets/75495e22-2fc9-4343-8e2e-e32e516434c5" />| <img width="1280" height="2856" alt="TampilanGrafikIsiFilterValid" src="https://github.com/user-attachments/assets/bb4e7911-2c75-49fe-91e8-f675bbd43c99" />|<img width="1280" height="2856" alt="KonfirmasiPesanBerhasilDownload" src="https://github.com/user-attachments/assets/4137ad9f-9a31-443a-ad04-10181c51f685" />|
 
 ### 👤 Profil & Logout
 
-| Profil             | Edit Profil            | Edit Foto                     |
+| Profil             | Edit Profil            | Konfirmasi Edit               |
 | ------------------ | ---------------------- | ----------------------------- |
-| <img width="1280" height="2856" alt="UpdateUIProfil" src="https://github.com/user-attachments/assets/e033d49f-4ace-4dd9-b27d-6854ff89b3f2" />| <img width="1280" height="2856" alt="UpdateUIEditProfile" src="https://github.com/user-attachments/assets/868604ed-ab34-455c-a85a-4c12e6fe3861" />| <img width="1280" height="2856" alt="HalamanEditProfilePicture" src="https://github.com/user-attachments/assets/90687a20-ab39-4c63-85c5-52c5db6ec99c" />|
+| <img width="1280" height="2856" alt="UIProfileScreenBaru" src="https://github.com/user-attachments/assets/37556b12-8f2c-4016-b016-2e925913e531" />| <img width="1280" height="2856" alt="EditUIProfileScreenBaru" src="https://github.com/user-attachments/assets/318cd6b9-1db1-4151-879c-5aff5683ecb3" />| <img width="1280" height="2856" alt="KonfirmasiUbahProfileScreenBaru" src="https://github.com/user-attachments/assets/6a565c53-3cd0-4a24-bc60-327dd5300a72" />|
 
-| Konfirmasi Edit           | Profil Setelah Edit            | Konfirmasi Logout    |
+| Konfirmasi Logout          | Notifikasi Logout           | Hasil Download Grafik   |
 | ------------------------- | ------------------------------ | -------------------- |
-| <img width="1280" height="2856" alt="KonfirmasiEditProfile" src="https://github.com/user-attachments/assets/57c72578-0e39-4c7d-8091-a769125f51bd" />| <img width="1280" height="2856" alt="TampilanProfileSetelahEdit" src="https://github.com/user-attachments/assets/f72370be-f6c1-4395-a306-8221931c9f9d" />| <img width="1280" height="2856" alt="KonfirmasiLogout" src="https://github.com/user-attachments/assets/50fb9ff4-7e6c-4882-8502-3994db8a1564" />|
-
-| Notifikasi Logout    |  Validasi Salah Tanggal Grafik |  ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  |
-| -------------------- | -------------------------------| --------------------- |
-| <img width="1280" height="2856" alt="NotifikasiLogout" src="https://github.com/user-attachments/assets/385b3a7a-cc0a-4179-adef-65e58c458433" />| <img width="1280" height="2856" alt="ValidasiFilterTangganSalah" src="https://github.com/user-attachments/assets/ecd76f1a-719d-42fb-b67d-7bd0620249a6" />| ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎   |
+| <img width="1280" height="2856" alt="KonfirmasiLogoutBaru" src="https://github.com/user-attachments/assets/764f4815-eaaa-456f-a3ef-530b1f1eef3c" />| <img width="1280" height="2856" alt="NotifikasiLogoutBaru" src="https://github.com/user-attachments/assets/1a63bcbf-69fd-4256-b094-37a1d9ac0373" />| <img width="1280" height="2856" alt="NotifikasiLogoutBaru" src="https://github.com/user-attachments/assets/1fb340e2-4bb0-4076-99d4-9723ffdebcee" />|
+ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎   |
 
 
 ---
