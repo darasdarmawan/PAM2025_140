@@ -35,11 +35,6 @@ import com.example.moodcare2.MoodCareApplication
 import com.example.moodcare2.R
 import com.example.moodcare2.data.model.Mood
 import androidx.compose.ui.res.colorResource
-import com.example.moodcare2.data.model.SaveGraphRequest
-import com.example.moodcare2.data.remote.ApiService
-import com.example.moodcare2.data.remote.RetrofitClient.apiService
-import com.example.moodcare2.data.repository.MoodCareRepository
-import com.example.moodcare2.utils.SessionManager
 import com.example.moodcare2.viewmodel.GraphViewModel
 import com.example.moodcare2.viewmodel.GraphState
 import com.example.moodcare2.utils.getMoodEmoji
@@ -49,7 +44,6 @@ import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.formatter.ValueFormatter
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -77,19 +71,8 @@ fun MoodGraphScreen(navController: NavController) {
     var chartView by remember { mutableStateOf<LineChart?>(null) }
     var showDownloadDialog by remember { mutableStateOf(false) }
     var downloadMessage by remember { mutableStateOf("") }
-    var hasStoragePermission by remember { mutableStateOf(checkStoragePermission(context)) }
-
     val graphState by viewModel.graphState.collectAsState()
 
-    val permissionLauncher = rememberLauncherForActivityResult(
-        ActivityResultContracts.RequestPermission()
-    ) { isGranted ->
-        hasStoragePermission = isGranted
-        if (!isGranted) {
-            downloadMessage = "❌ Izin penyimpanan ditolak. Tidak dapat menyimpan grafik."
-            showDownloadDialog = true
-        }
-    }
 
     Scaffold(
         topBar = {
