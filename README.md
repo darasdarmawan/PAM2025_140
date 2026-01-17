@@ -86,10 +86,7 @@ Aplikasi menerapkan arsitektur **client–server**, dengan Android sebagai front
 
 | Splash Screen            | Login            | Register     |
 | ------------------------ | ---------------- | ------------ |
-| <img width="1280" height="2856" alt="TampilanSplashScreen" src="https://github.com/user-attachments/assets/82db9bfd-f9e0-424f-8444-45b3a0951727" />
- | <img width="1280" height="2856" alt="HalamanLogin" src="https://github.com/user-attachments/assets/50ed7e6c-666a-407b-a92b-b51b261497c4" />
-| <img width="1280" height="2856" alt="Register" src="https://github.com/user-attachments/assets/c23586e5-4a0d-49a8-82a6-d6248dab9001" />
- |
+| <img width="1280" height="2856" alt="TampilanSplashScreen" src="https://github.com/user-attachments/assets/82db9bfd-f9e0-424f-8444-45b3a0951727" />| <img width="1280" height="2856" alt="HalamanLogin" src="https://github.com/user-attachments/assets/50ed7e6c-666407b-a92b-b51b261497c4" />| <img width="1280" height="2856" alt="Register" src="https://github.com/user-attachments/assets/c23586e5-4a0d-49a8-82a6-d6248dab9001" />|
 
 | Validasi Login    | Validasi Password          | Email Sudah Terdaftar                   |
 | ----------------- | -------------------------- | --------------------------------------- |
