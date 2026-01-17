@@ -66,65 +66,77 @@ fun HomeScreen(navController: NavController) {
 
     Scaffold(
         topBar = {
-            CenterAlignedTopAppBar(
-                title = {
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.Center
-                    ) {
-                        Image(
-                            painter = painterResource(id = R.drawable.fox),
-                            contentDescription = "Logo",
-                            modifier = Modifier.size(32.dp)
-                        )
-                        Spacer(Modifier.width(8.dp))
-                        Text(
-                            stringResource(R.string.app_name),
-                            style = MaterialTheme.typography.titleLarge,
-                            fontWeight = FontWeight.ExtraBold,
-                            color = colorResource(R.color.PinkSecondary)
-                        )
-                    }
-                },
-                actions = {
-                    IconButton(onClick = { navController.navigate(Screen.Profile.route) }) {
-                        key(fotoProfil, refreshTrigger) {
-                            Surface(
-                                modifier = Modifier.size(38.dp),
-                                shape = CircleShape,
-                                border = BorderStroke(2.dp, colorResource(R.color.PinkPrimary).copy(alpha = 0.5f)),
-                                color = Color.White
-                            ) {
-                                if (!fotoProfil.isNullOrBlank()) {
-                                    Image(
-                                        painter = rememberAsyncImagePainter(
-                                            model = ImageRequest.Builder(context)
-                                                .data(fotoProfil)
-                                                .memoryCachePolicy(CachePolicy.DISABLED)
-                                                .diskCachePolicy(CachePolicy.DISABLED)
-                                                .crossfade(true)
-                                                .build()
-                                        ),
-                                        contentDescription = null,
-                                        modifier = Modifier.clip(CircleShape),
-                                        contentScale = ContentScale.Crop
-                                    )
-                                } else {
-                                    Icon(
-                                        Icons.Default.Person,
-                                        contentDescription = null,
-                                        tint = colorResource(R.color.PinkPrimary),
-                                        modifier = Modifier.padding(6.dp)
-                                    )
+            Surface(
+                modifier = Modifier.fillMaxWidth(),
+                color = colorResource(R.color.PinkDark).copy(alpha = 0.6f), // Putih transparan agar gradasi matcha di belakang tetap sedikit terlihat
+                border = BorderStroke(
+                    width = 1.dp,
+                    color = colorResource(R.color.PinkSecondary).copy(alpha = 0.2f) // Batas pink tipis di bagian bawah
+                )
+            ) {
+                CenterAlignedTopAppBar(
+                    title = {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.Center
+                        ) {
+                            Image(
+                                painter = painterResource(id = R.drawable.fox),
+                                contentDescription = "Logo",
+                                modifier = Modifier.size(32.dp)
+                            )
+                            Spacer(Modifier.width(8.dp))
+                            Text(
+                                stringResource(R.string.app_name),
+                                style = MaterialTheme.typography.titleLarge,
+                                fontWeight = FontWeight.ExtraBold,
+                                color = colorResource(R.color.Matcha)
+                            )
+                        }
+                    },
+                    actions = {
+                        IconButton(onClick = { navController.navigate(Screen.Profile.route) }) {
+                            key(fotoProfil, refreshTrigger) {
+                                Surface(
+                                    modifier = Modifier.size(38.dp),
+                                    shape = CircleShape,
+                                    border = BorderStroke(
+                                        2.dp,
+                                        colorResource(R.color.PinkPrimary).copy(alpha = 0.5f)
+                                    ),
+                                    color = Color.White
+                                ) {
+                                    if (!fotoProfil.isNullOrBlank()) {
+                                        Image(
+                                            painter = rememberAsyncImagePainter(
+                                                model = ImageRequest.Builder(context)
+                                                    .data(fotoProfil)
+                                                    .memoryCachePolicy(CachePolicy.DISABLED)
+                                                    .diskCachePolicy(CachePolicy.DISABLED)
+                                                    .crossfade(true)
+                                                    .build()
+                                            ),
+                                            contentDescription = null,
+                                            modifier = Modifier.clip(CircleShape),
+                                            contentScale = ContentScale.Crop
+                                        )
+                                    } else {
+                                        Icon(
+                                            Icons.Default.Person,
+                                            contentDescription = null,
+                                            tint = colorResource(R.color.PinkPrimary),
+                                            modifier = Modifier.padding(6.dp)
+                                        )
+                                    }
                                 }
                             }
                         }
-                    }
-                },
-                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color.Transparent
+                    },
+                    colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+                        containerColor = Color.Transparent
+                    )
                 )
-            )
+            }
         },
         bottomBar = {
             NavigationBar(
@@ -185,10 +197,10 @@ fun HomeScreen(navController: NavController) {
                         modifier = Modifier
                             .fillMaxWidth()
                             .background(
-                                Brush.linearGradient(
+                                Brush.horizontalGradient(
                                     colors = listOf(
                                         colorResource(R.color.PinkPrimary),
-                                        colorResource(R.color.PinkSecondary)
+                                        colorResource(R.color.Matcha)
                                     )
                                 )
                             )
