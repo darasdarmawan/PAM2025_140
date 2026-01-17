@@ -20,6 +20,8 @@ import okhttp3.RequestBody.Companion.toRequestBody
 import java.io.File
 import retrofit2.Response
 import android.os.Build
+import com.example.moodcare2.data.model.SaveGraphRequest
+
 class MoodCareRepository(val sessionManager: SessionManager) {
 
     private val apiService = RetrofitClient.apiService
@@ -121,4 +123,21 @@ class MoodCareRepository(val sessionManager: SessionManager) {
             }
         }
     }
+    suspend fun saveGraphHistory(
+        startDate: String,
+        endDate: String,
+        fileName: String
+    ): Response<ApiResponse> {
+        val token = sessionManager.getToken()
+            ?: return Response.error(401, okhttp3.ResponseBody.create(null, "No token"))
+
+        val request = SaveGraphRequest(
+            start_date = startDate,
+            end_date = endDate,
+            file_name = fileName
+        )
+
+        return apiService.saveGraphHistory(token, request)
+    }
+
 }

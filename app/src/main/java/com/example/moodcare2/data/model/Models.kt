@@ -106,3 +106,16 @@ data class ErrorResponse(
     val success: Boolean,
     val message: String
 )
+
+data class SaveGraphRequest(
+    val start_date: String,
+    val end_date: String,
+    val file_name: String
+)
+
+data class SaveGraphResponse(
+    val success: Boolean,
+    val message: String
+)
+
+

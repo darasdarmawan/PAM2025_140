@@ -35,6 +35,11 @@ import com.example.moodcare2.MoodCareApplication
 import com.example.moodcare2.R
 import com.example.moodcare2.data.model.Mood
 import androidx.compose.ui.res.colorResource
+import com.example.moodcare2.data.model.SaveGraphRequest
+import com.example.moodcare2.data.remote.ApiService
+import com.example.moodcare2.data.remote.RetrofitClient.apiService
+import com.example.moodcare2.data.repository.MoodCareRepository
+import com.example.moodcare2.utils.SessionManager
 import com.example.moodcare2.viewmodel.GraphViewModel
 import com.example.moodcare2.viewmodel.GraphState
 import com.example.moodcare2.utils.getMoodEmoji
@@ -44,6 +49,7 @@ import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.formatter.ValueFormatter
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -203,23 +209,38 @@ fun MoodGraphScreen(navController: NavController) {
 
                         OutlinedButton(
                             onClick = {
-                                if (needsStoragePermission() && !hasStoragePermission) {
-                                    permissionLauncher.launch(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                                } else {
-                                    chartView?.let { chart ->
-                                        scope.launch {
-                                            val bitmap = chartToBitmap(chart)
-                                            val result = saveBitmapToMediaStore(context, bitmap, startDate, endDate)
-                                            downloadMessage = result
-                                            showDownloadDialog = true
-                                            if (result.contains("berhasil")) {
-                                                saveDownloadHistory(application.sessionManager.getToken(), startDate, endDate, "MoodGraph_${startDate}_to_${endDate}.png")
-                                            }
+                                chartView?.let { chart ->
+                                    scope.launch {
+                                        val bitmap = chartToBitmap(chart)
+
+                                        // 1️⃣ Simpan file
+                                        val fileName = saveBitmapToMediaStore(
+                                            context,
+                                            bitmap,
+                                            startDate,
+                                            endDate
+                                        )
+
+                                        // 2️⃣ Simpan DB & CEK RESPONSE
+                                        val response = application.repository.saveGraphHistory(
+                                            startDate,
+                                            endDate,
+                                            fileName
+                                        )
+
+                                        if (response.isSuccessful) {
+                                            downloadMessage =
+                                                "✅ Grafik & riwayat berhasil disimpan\n\n$fileName"
+                                        } else {
+                                            downloadMessage =
+                                                "⚠️ File tersimpan, tapi DB gagal:\n${response.errorBody()?.string()}"
                                         }
+
+                                        showDownloadDialog = true
                                     }
                                 }
                             },
-                            modifier = Modifier.fillMaxWidth().height(50.dp),
+                        modifier = Modifier.fillMaxWidth().height(50.dp),
                             shape = RoundedCornerShape(12.dp),
                             border = BorderStroke(1.dp, colorResource(R.color.PinkSecondary)),
                             colors = ButtonDefaults.outlinedButtonColors(contentColor = colorResource(R.color.PinkSecondary))
@@ -506,32 +527,28 @@ fun saveBitmapToMediaStore(
     startDate: String,
     endDate: String
 ): String {
-    return try {
-        val fileName = "MoodGraph_${startDate}_to_${endDate}.png"
-        val contentValues = ContentValues().apply {
-            put(MediaStore.MediaColumns.DISPLAY_NAME, fileName)
-            put(MediaStore.MediaColumns.MIME_TYPE, "image/png")
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                put(MediaStore.MediaColumns.RELATIVE_PATH, "Pictures/MoodCare")
-            }
+    val fileName = "MoodGraph_${startDate}_to_${endDate}.png"
+
+    val contentValues = ContentValues().apply {
+        put(MediaStore.MediaColumns.DISPLAY_NAME, fileName)
+        put(MediaStore.MediaColumns.MIME_TYPE, "image/png")
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            put(MediaStore.MediaColumns.RELATIVE_PATH, "Pictures/MoodCare")
         }
-
-        val uri = context.contentResolver.insert(
-            MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
-            contentValues
-        )
-
-        uri?.let {
-            context.contentResolver.openOutputStream(it)?.use { outputStream ->
-                bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
-            }
-            "✅ ${context.getString(R.string.graph_saved)}\n\nLokasi: Pictures/MoodCare/$fileName"
-        } ?: "❌ Gagal membuat file"
-
-    } catch (e: Exception) {
-        "❌ Gagal menyimpan grafik:\n${e.message}"
     }
+
+    val uri = context.contentResolver.insert(
+        MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+        contentValues
+    ) ?: return "❌ Gagal membuat file"
+
+    context.contentResolver.openOutputStream(uri)?.use {
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, it)
+    }
+
+    return fileName
 }
+
 
 suspend fun saveDownloadHistory(
     token: String?,

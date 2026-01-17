@@ -11,6 +11,8 @@ import com.example.moodcare2.data.model.ApiResponse
 import com.example.moodcare2.data.model.ProfileResponse
 import com.example.moodcare2.data.model.UpdateMoodRequest
 import com.example.moodcare2.data.model.UpdateProfileRequest
+import com.example.moodcare2.data.model.SaveGraphRequest
+import com.example.moodcare2.data.model.SaveGraphResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Response
@@ -77,4 +79,11 @@ interface ApiService {
         @Part("nama") nama: RequestBody,
         @Part fotoProfil: MultipartBody.Part
     ): Response<ProfileResponse>
+
+    @POST("api/graphs/save.php")
+    suspend fun saveGraphHistory(
+        @Header("Authorization") token: String,
+        @Body request: SaveGraphRequest
+    ): Response<ApiResponse>
+
 }
